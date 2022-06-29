@@ -1,9 +1,9 @@
 {
  "properties": {
-  "displayName": "Management ports should be closed on your virtual machines",
+  "displayName": "TestPolicy:Management ports should be closed on your virtual machines.",
   "policyType": "BuiltIn",
   "mode": "All",
-  "description": "Open remote management ports are exposing your VM to a high level of risk from Internet-based attacks. These attacks attempt to brute force credentials to gain admin access to the machine.",
+  "description": "Test:Open remote management ports are exposing your VM to a high level of risk from Internet-based attacks. These attacks attempt to brute force credentials to gain admin access to the machine.",
   "metadata": {
    "version": "3.0.0",
    "category": "Security Center"
