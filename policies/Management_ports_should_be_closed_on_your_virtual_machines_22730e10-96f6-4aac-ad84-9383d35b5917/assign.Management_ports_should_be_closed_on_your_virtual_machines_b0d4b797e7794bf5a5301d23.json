@@ -4,7 +4,7 @@
   "tier": "Free"
  },
  "properties": {
-  "displayName": "Management ports should be closed on your virtual machines",
+  "displayName": "TestPolicy:Management ports should be closed on your virtual machines",
   "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/22730e10-96f6-4aac-ad84-9383d35b5917",
   "scope": "/subscriptions/d6bc91f0-7f68-44ec-afd8-78acece5b3c0",
   "notScopes": [],
