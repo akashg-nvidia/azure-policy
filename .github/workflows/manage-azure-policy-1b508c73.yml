@@ -13,11 +13,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Login to Azure
+    - name: Login to Azure new
       uses: azure/login@v1
       with:
         creds: ${{secrets.AZURE_CREDENTIALS_1b508c73}}
-        allow-no-subscriptions: true
     - name: Deploy ARM to Azure
       uses: azure/arm-deploy@v1
       with:
