@@ -1,0 +1,65 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "policyID": {
+            "type": "string",
+            "metadata": {
+                "displayName": "Policy definition name",
+                "description": "ID of the policy to assign."
+            },
+            "defaultValue": "/providers/Microsoft.Authorization/policyDefinitions/4fa4b6c0-31ca-4c0d-b10d-24b96f62a751"
+        },
+        "policyAssignmentName": {
+            "type": "string",
+            "metadata": {
+                "displayName": "Policy assignment name",
+                "description": "Name to use for a specific policy assignment."
+            },
+            "defaultValue": "testing with Venkat-AG"
+        },
+        "scopeName": {
+            "type": "string",
+            "metadata": {
+                "displayName": "Provide the scope name  group to limit policy assignment scope",
+                "description": "Optional resource group name to limit the policy scope.",
+                "strongType": "existingResourceGroups"
+            },
+            "defaultValue": "testRG"
+        },
+        "policyAssignmentMode": {
+            "type": "string",
+            "metadata": {
+                "displayName": "Policy assignment mode",
+                "description": "Enforced (default) or disabled."
+            },
+            "allowedValues": [
+                "Default",
+                "DoNotEnforce"
+            ],
+            "defaultValue": "Default"
+        },
+        "policyParameters": {
+            "type": "object",
+            "metadata": {
+                "displayName": "Policy parameters",
+                "description": "Policy parameters as an object parameter type."
+            },
+            "defaultValue": {
+            }
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Authorization/policyAssignments",
+            "name": "[parameters('policyAssignmentName')]",
+            "apiVersion": "2019-09-01",
+            "properties": {
+                "scope": "[parameters('scopeName')]",
+                "enforcementMode": "[parameters('policyAssignmentMode')]",
+                "policyDefinitionId": "[parameters('policyID')]",
+                "parameters": "[parameters('policyParameters')]"
+            }
+        }
+    ]
+}
