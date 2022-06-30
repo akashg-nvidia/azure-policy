@@ -25,8 +25,9 @@ jobs:
       with:
         creds: ${{secrets.AZURE_CREDENTIALS_1b508c73}}
         allow-no-subscriptions: true
-    - name: Create or Update Azure Policies
-      uses: azure/manage-azure-policy@v0
+    - name: Login to Azure
+      uses: azure/arm-deploy@v1
       with:
-        paths: |
-          RBAC_Policy/policies/Audit_usage_of_custom_RBAC_rules_a451c1ef-c6ca-483d-87ed-f49761e3ffb5/**
+        subscriptionId: d6bc91f0-7f68-44ec-afd8-78acece5b3c0
+        resourceGroupName: testRG
+        template: policies/assignPolicy/sampleARMTemplate.json
