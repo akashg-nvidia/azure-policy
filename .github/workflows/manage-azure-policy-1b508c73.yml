@@ -25,8 +25,8 @@ jobs:
       with:
         creds: ${{secrets.AZURE_CREDENTIALS_1b508c73}}
         allow-no-subscriptions: true
-    - name: Login to Azure
+    - name: Deploy ARM to Azure
       uses: azure/arm-deploy@v1
       with:
-        resourceGroupName: testRG
+        resourceGroupName: NetworkWatcherRG
         template: policies/assignPolicy/sampleARMTemplate.json
