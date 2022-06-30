@@ -20,5 +20,5 @@ jobs:
     - name: Deploy ARM to Azure testRG
       uses: azure/arm-deploy@v1
       with:
-        template: policies/assignPolicy/sampleARMTemplate.json
+        template: ./policies/assignPolicy/sampleARMTemplate.json
         resourceGroupName: testRG
