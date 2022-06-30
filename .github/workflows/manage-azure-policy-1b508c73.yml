@@ -21,4 +21,3 @@ jobs:
       uses: azure/arm-deploy@v1
       with:
         template: policies/assignPolicy/sampleARMTemplate.json
-        resourceGroupName: NetworkWatcherRG
