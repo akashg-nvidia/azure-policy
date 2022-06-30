@@ -16,7 +16,7 @@
                 "displayName": "Policy assignment name",
                 "description": "Name to use for a specific policy assignment."
             },
-            "defaultValue": "[Preview]: Storage account public access should be disallowed"
+            "defaultValue": "testing"
         },
         "scopeName": {
             "type": "string",
@@ -55,7 +55,7 @@
             "name": "[parameters('policyAssignmentName')]",
             "apiVersion": "2019-09-01",
             "properties": {
-                "scope": "[subscriptions/d6bc91f0-7f68-44ec-afd8-78acece5b3c0/resourceGroups/testRG]",
+                "scope": "[testRG]",
                 "enforcementMode": "[parameters('policyAssignmentMode')]",
                 "policyDefinitionId": "[parameters('policyID')]",
                 "parameters": "[parameters('policyParameters')]"
