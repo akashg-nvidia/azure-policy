@@ -16,8 +16,7 @@ jobs:
     - name: Login to Azure new
       uses: azure/login@v1
       with:
-        creds: ${{secrets.AZURE_CREDENTIALS_1b508c73}}
-        subscription-id: d6bc91f0-7f68-44ec-afd8-78acece5b3c0
+        creds: '{"clientId":"150eb05c-da6e-4e19-9262-8dea8c812ed9","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"d6bc91f0-7f68-44ec-afd8-78acece5b3c0","tenantId":"5502fde1-90d8-49de-8f96-1821fa06eee2"}'
     - name: Deploy ARM to Azure
       uses: azure/arm-deploy@v1
       with:
