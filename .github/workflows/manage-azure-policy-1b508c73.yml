@@ -28,5 +28,4 @@ jobs:
     - name: Deploy ARM to Azure
       uses: azure/arm-deploy@v1
       with:
-        resourceGroupName: NetworkWatcherRG
         template: policies/assignPolicy/sampleARMTemplate.json
