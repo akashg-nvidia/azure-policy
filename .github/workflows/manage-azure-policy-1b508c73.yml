@@ -20,5 +20,5 @@ jobs:
     - name: Deploy ARM to Azure testRG
       uses: azure/arm-deploy@v1
       with:
-        template: ./policies/assignPolicy/sampleARMTemplate.json
+        template: policies/assignPolicy/Management_ports_should_be_closed_on_your_virtual_machines_22730e10-96f6-4aac-ad84-9383d35b5917/*.json
         resourceGroupName: testRG
