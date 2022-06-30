@@ -22,5 +22,4 @@ jobs:
       uses: azure/arm-deploy@v1
       with:
         template: policies/assignPolicy/sampleARMTemplate.json
-        scope: subscription
-        subscriptionId: d6bc91f0-7f68-44ec-afd8-78acece5b3c0
+        resourceGroupName: NetworkWatcherRG
