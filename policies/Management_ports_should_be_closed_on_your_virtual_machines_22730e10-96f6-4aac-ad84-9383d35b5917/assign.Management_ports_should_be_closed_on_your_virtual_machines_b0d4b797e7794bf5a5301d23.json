@@ -5,7 +5,7 @@
  },
  "properties": {
   "displayName": "TestPolicy:Management ports should be closed on your virtual machines",
-  "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/22730e10-96f6-4aac-ad84-9383d35b5917",
+  "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/009a0c92-f5b4-4776-9b66-4ed2b4775563",
   "scope": "/subscriptions/d6bc91f0-7f68-44ec-afd8-78acece5b3c0",
   "notScopes": [],
   "parameters": {},
