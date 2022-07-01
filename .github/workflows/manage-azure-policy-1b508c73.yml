@@ -13,13 +13,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Login to Azure CLI
+    - name: Login to Azure CLI 1_07
       uses: azure/login@v1
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}
+        
     - name: Deploy ARM to Azure testRG
       uses: azure/manage-azure-policy@v0
       with:
         resourceGroupName: testRG
-        paths: |
-            policies/Management_ports_should_be_closed_on_your_virtual_machines_22730e10-96f6-4aac-ad84-9383d35b5917/**
+        template: ./policies/assignPolicy/sampleARMTemplate.json
