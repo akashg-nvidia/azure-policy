@@ -22,4 +22,5 @@ jobs:
       uses: azure/arm-deploy@v1
       with:
         scope: subscription
+        region: "East US"
         template: ./policies/assignPolicy/sampleARMTemplate.json
