@@ -16,7 +16,7 @@
                 "displayName": "Policy assignment name",
                 "description": "Name to use for a specific policy assignment."
             },
-            "defaultValue": "testing"
+            "defaultValue": "testing with Venkat-AG"
         },
         "scopeName": {
             "type": "string",
@@ -55,7 +55,7 @@
             "name": "[parameters('policyAssignmentName')]",
             "apiVersion": "2019-09-01",
             "properties": {
-                "scope": "[testRG]",
+                "scope": "[parameters('scopeName')]",
                 "enforcementMode": "[parameters('policyAssignmentMode')]",
                 "policyDefinitionId": "[parameters('policyID')]",
                 "parameters": "[parameters('policyParameters')]"
