@@ -19,7 +19,7 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
         
     - name: Deploy ARM to Azure testRG
-      uses: azure/manage-azure-policy@v0
+      uses: azure/arm-deploy@v1
       with:
         resourceGroupName: testRG
         template: ./policies/assignPolicy/sampleARMTemplate.json
